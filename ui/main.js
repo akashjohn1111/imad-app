@@ -9,7 +9,7 @@ img.onclick = function ()
 };
 var submit=document.getElementById('submit_btn');
 submit.onclick=function(){
-    if(request.ststus==XMLHTTpRequest.DONE)
+    if(request.status==XMLHTTpRequest.DONE)
 {
     if(request.readyState===200)
     {var names=responseText;
@@ -21,8 +21,8 @@ submit.onclick=function(){
         var ul=document.getElementById('namelist');
         ul.innerHTMl=list;
     }
-    }};
+    }
     var nameInput=document.getElementById('name');
     var name=nameInput.value;
-    request.open('get','akashjohn1111@ssh.imad.hasura-app.io')
-    }
+    request.open('get','http://akashjohn1111.imad.hasura-app.io',true);
+    };
