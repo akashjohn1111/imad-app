@@ -4,5 +4,5 @@ element.innerHTML='HAHAHAHA';
 var img=document.getElementById('madi');
 img.onclick= function(){
     
-      img.style.marginLeft="200px";
+      img.style.marginLeft='100px';
 };
