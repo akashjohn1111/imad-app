@@ -22,6 +22,7 @@ submit.onclick=function(){
         ul.innerHTMl=list;
     }
     }
+}
     var nameInput=document.getElementById('name');
     var name=nameInput.value;
     request.open('get','http://akashjohn1111.imad.hasura-app.io/submit-name',true);
