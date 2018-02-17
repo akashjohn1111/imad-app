@@ -7,8 +7,7 @@ img.onclick = function ()
     img.style.marginLeft = '100px';
     
 };
- var nameInput=document.getElementById('name');
-    var name=nameInput.value;
+ 
 var submit=document.getElementById('submit_btn');
 submit.onclick=function(){
     if(request.status==XMLHTTpRequest.DONE)
@@ -17,15 +16,15 @@ submit.onclick=function(){
     {var names=responseText;
     names=JSON.parse(names);
     for(var i=0;i<names.length;i++)
-
-        {list+='<li>'+names[i]+'</li>';
+     {list+='<li>'+names[i]+'</li>';
         }
         var ul=document.getElementById('namelist');
         ul.innerHTMl=list;
     }
     }
 };
-   
+   var nameInput=document.getElementById('name');
+    var name=nameInput.value;
     request.open('GET','http://akashjohn1111.imad.hasura-app.io/submit-name?name='+name,true);
     request.send(null);
     
