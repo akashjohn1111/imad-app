@@ -10,14 +10,15 @@ img.onclick = function ()
  
 var submit=document.getElementById('submit_btn');
 submit.onclick=function(){
-    var request=new XMLHTTpRequest();
+    var request=new XMLHttpRequest();
     request.onreadystatechange=function(){
     
-    if(request.status==XMLHTTpRequest.DONE)
+    if(request.status==XMLHttpRequest.DONE)
 {
     if(request.readyState===200)
-    {var names=responseText;
+    {var names=request.responseText;
     names=JSON.parse(names);
+    var list='';
     for(var i=0;i<names.length;i++)
      {list+='<li>'+names[i]+'</li>';
         }
