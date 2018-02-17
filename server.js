@@ -8,16 +8,11 @@ app.use(morgan('combined'));
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-
-app.get('/article-one', function (req, res) {
-   res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
-});
-
-app.get('/article-two', function (req, res) {
-   res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
-});
-app.get('/article-3', function (req, res) {
-   res.sendFile(path.join(__dirname, 'ui', 'article-3.html'));
+var names=[];
+app.get('/submit-name/:name',function(req,res){
+    var name=req.params.names;
+    names.push(name);
+    res.send(JSON.stringify(names));
 });
 
 app.get('/ui/main.js', function (req, res) {
@@ -30,12 +25,7 @@ app.get('/ui/style.css', function (req, res) {
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
-var names=[];
-app.get('/submit-name/:name',function(req,res){
-    var name=req.params.names;
-    names.push(name);
-    res.send(JSON.stringify(names));
-});
+
 // Do not change port, otherwise your app won't run on IMAD servers
 // Use 8080 only for local development if you already have apache running on 80
 
