@@ -28,4 +28,4 @@ submit.onclick=function(){
    
     request.open('GET','http://akashjohn1111.imad.hasura-app.io/submit-name?name='+name,true);
     request.send(null);
-    };
+    
