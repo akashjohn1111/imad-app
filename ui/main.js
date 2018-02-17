@@ -24,5 +24,5 @@ submit.onclick=function(){
     }
     var nameInput=document.getElementById('name');
     var name=nameInput.value;
-    request.open('get','http://akashjohn1111.imad.hasura-app.io',true);
+    request.open('get','http://akashjohn1111.imad.hasura-app.io/submit-name',true);
     };
