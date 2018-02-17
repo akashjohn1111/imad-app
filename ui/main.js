@@ -24,7 +24,8 @@ submit.onclick=function(){
         ul.innerHTMl=list;
     }
     }
-}
+};
    
-    request.open('get','http://akashjohn1111.imad.hasura-app.io/submit-name='+name,true);
+    request.open('GET','http://akashjohn1111.imad.hasura-app.io/submit-name='+name,true);
+    request.send(null);
     };
