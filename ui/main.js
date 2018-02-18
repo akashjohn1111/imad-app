@@ -1,12 +1,4 @@
-console.log('Loaded!');
-var element=document.getElementById('main-text');
-element.innerHTML='HAHAHAHA';
-var img=document.getElementById('madi');
-img.onclick = function ()
-{
-    img.style.marginLeft = '100px';
-    
-};
+
  var nameInput=document.getElementById('name');
     var name=nameInput.value;
 var submit=document.getElementById('submit_btn');
